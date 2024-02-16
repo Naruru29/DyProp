@@ -1,7 +1,6 @@
 # DyProp
-DynamicPropertyを実質無限に同じIDで保存することができます
-DynamicProperty can be stored virtually infinitely with the same ID
 
+DynamicPropertyを実質無限に同じIDで保存することができます
 ```ts
 import * as DyProp from "./lib/DyProp";
 const Id = "test";
@@ -15,6 +14,8 @@ DyProp.get(Id); // 配列を返します
 // Idを取得する
 DyProp.getIds(); // 配列を返します
 ```
+
+DynamicProperty can be stored virtually infinitely with the same ID
 ```ts
 import * as DyProp from "./lib/DyProp";
 const Id = "test";
