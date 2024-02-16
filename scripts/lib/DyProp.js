@@ -26,11 +26,12 @@ export async function get(id) {
     while (true) {
         const ObjectId = `${startId}${id}_${i}`;
 
-        if (!world.getDynamicProperty(ObjectId)) break;
+        if (world.getDynamicProperty(ObjectId) === undefined) break;
 
         const Object = JSON.parse(world.getDynamicProperty(ObjectId));
 
         array.push(Object);
+        i++;
     };
 
     return array;
