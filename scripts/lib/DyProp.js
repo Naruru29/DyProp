@@ -9,7 +9,6 @@ export async function save(id, string) {
         
         Object.push(string);
         try {
-            array.splice(array.indexOf(item), 1);
             world.setDynamicProperty(ObjectId, JSON.stringify(Object));
             break;
         } catch {
