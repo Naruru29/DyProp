@@ -1,6 +1,11 @@
 import { world } from "@minecraft/server";
 const startId = "DyProp_"
 
+/**
+ * DyProp save string data to ID
+ * @param {String} id DyProp ID
+ * @param {String} string DyProp string data
+ */
 export async function save(id, string) {
     let i = 0;
     while (true) {
@@ -16,10 +21,13 @@ export async function save(id, string) {
             continue;
         };
     };
-
-    return true;
 };
 
+/**
+ * DyProp get string data for ID
+ * @param {String} id Dyprop ID
+ * @returns {Array} Array data
+ */
 export async function get(id) {
     let array = [];
     let i = 0;
@@ -37,6 +45,10 @@ export async function get(id) {
     return array;
 };
 
+/**
+ * DyProp get all ID
+ * @returns {Array} Array IDs data
+ */
 export async function getIds() {
     let ids = JSON.parse(JSON.stringify(world.getDynamicPropertyIds()));
     let array = [];
